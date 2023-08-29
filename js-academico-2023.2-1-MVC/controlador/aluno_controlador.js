@@ -4,7 +4,7 @@ class AlunoControlador {
         this.servico = new AlunoService();
     }
 
-    inserir() {
+    inserirAluno() {
         const nomeElemento = document.querySelector("#nome");
         const idadeElemento = document.querySelector("#idade");
         const matriculoElemento = document.querySelector("#matricula");

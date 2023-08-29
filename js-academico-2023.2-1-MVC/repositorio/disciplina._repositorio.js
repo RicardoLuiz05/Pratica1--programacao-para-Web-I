@@ -1,21 +1,22 @@
-class disciplinaRepositorio {
+class DisciplinaRepositorio {
 
     constructor(){
+        this.disciplinas = []
         this.alunos = [];
     }
 
-    inserirAluno(aluno) {
-        TouchList.alunos.push(aluno);
+    inserir(disciplina) {
+        this.disciplina.push(disciplina);
     }
 
-    removerAluno(matricula) {
-        const indxAlunoARemover = this.alunos.findIndex(aluno => aluno.matricula === matricula);
-        if (indxAlunoARemover > -1) {
-            this.alunos.splice(indxAlunoARemover, 1);
+    remover(codigo){
+        const indexDisciplina = this.disciplinas.findIndex(disciplina => disciplina.codigo === codigo);
+        if (indexDisciplina > -1) {
+            this.disciplinas.splice(indexDisciplina, 1);
         }
     }
 
-    listarAlunos() {
-        return this.alunos;
+    listarDisciplinas() {
+        return this.diciplinas;
     }
 }
