@@ -2,19 +2,8 @@ class Disciplina {
 
     constructor(codigo, nome){
         this._codigo = codigo;
-        this.nome = nome;
-        this.alunos = [];
-        }
-
-        inserirAluno(aluno) {
-            this.alunos.push(aluno);
-        }
-    
-        removerAluno(matricula){
-            const indexDisciplina = this.alunos.findIndex(aluno => aluno.matricula === matricula);
-            if (indexDisciplina > -1) {
-                this.disciplinas.splice(indexDisciplina, 1);
-            }
+        this._nome = nome;
+        this._alunos = [];
         }
     
         listarAlunos() {
@@ -22,11 +11,11 @@ class Disciplina {
         }
 
         get nome() {
-            return this.nome;
+            return this._nome;
         }
     
         set nome(novoNome) {
-            this.nome = novoNome;
+            this._nome = novoNome;
         }
 
         get codigo() {
@@ -34,8 +23,13 @@ class Disciplina {
         }
 
         get alunos(){
-            return this.alunos.listarAlunos();
+            return this.listarAlunos();
         }
+
+        set alunos(novosAlunos){
+            this._alunos = novosAlunos;
+        }
+
 
 
     
